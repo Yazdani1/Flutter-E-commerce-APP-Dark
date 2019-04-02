@@ -152,7 +152,30 @@ class _HomeState extends State<Home> {
             ),
           ),//second container end
 
-          
+          new SizedBox(height: 20.0,),
+
+          new Container(
+            margin: EdgeInsets.all(10.0),
+            child: new Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+
+                new Text("Order",
+                style: TextStyle(fontSize: 22.0,color: Colors.white),
+                ),
+                new Text("Collection",
+                  style: TextStyle(fontSize: 20.0,color: Colors.grey.withOpacity(0.7)),
+                ),
+                new Text("Comment",
+                  style: TextStyle(fontSize: 20,color: Colors.grey.withOpacity(0.7)),
+                ),
+
+
+              ],
+            ),
+          )
+
+
 
         ],
       ),
