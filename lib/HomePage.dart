@@ -212,6 +212,7 @@ class _HomeState extends State<Home> {
         ],
       ),//lisview end here
 
+//Bottom navigation bar
 
       bottomNavigationBar: new Theme(
         data: Theme.of(context).copyWith(
@@ -247,20 +248,6 @@ class _HomeState extends State<Home> {
         ),
       ),
 
-
-
-
-//      bottomNavigationBar: new BottomNavigationBar(
-//
-//          items: [
-//
-//        new BottomNavigationBarItem(icon: Icon(Icons.home,color: Colors.black,),title: Text("Home")),
-//        new BottomNavigationBarItem(icon: Icon(Icons.radio),title: Text("Product")),
-//        new BottomNavigationBarItem(icon: Icon(Icons.shopping_cart),title: Text("List")),
-//        new BottomNavigationBarItem(icon: Icon(Icons.all_out),title: Text("Profile")),
-//
-//      ]),
-      
     );
   }
   Widget allData(String image,String price,String des,String lstDes,String amount){
@@ -284,8 +271,6 @@ class _HomeState extends State<Home> {
                     width: 80.0,
                     fit: BoxFit.cover,
                   )
-
-
               ),
             ),
 
@@ -297,7 +282,7 @@ class _HomeState extends State<Home> {
                 children: <Widget>[
 
                   new Text("\$"+price,
-                    style: TextStyle(fontSize: 22.0,color: Colors.white),
+                    style: TextStyle(fontSize: 20.0,color: Colors.white),
                   ),
                   new SizedBox(height: 7.0,),
                   new Text(des,
@@ -319,7 +304,7 @@ class _HomeState extends State<Home> {
                   child: new Align(
                     alignment: Alignment.topRight,
                     child: new Text(amount,
-                    style: TextStyle(color: Colors.yellow,fontSize: 20.0),
+                    style: TextStyle(color: Colors.yellow,fontSize: 18.0),
                     ),
                   ),
                 )
