@@ -197,6 +197,8 @@ class _HomeState extends State<Home> {
                 new SizedBox(height: 10.0,),
                 allData("asset/b.jpg", "986", "T-Shirt", "Best Designer", "+35"),
                 new SizedBox(height: 10.0,),
+                allData("asset/a.jpg", "986", "T-Shirt", "Best Designer", "+15"),
+                new SizedBox(height: 10.0,),
 
 
               ],
@@ -208,9 +210,57 @@ class _HomeState extends State<Home> {
 
 
         ],
-      ),
-      
+      ),//lisview end here
 
+
+      bottomNavigationBar: new Theme(
+        data: Theme.of(context).copyWith(
+          // sets the background color of the `BottomNavigationBar`
+            canvasColor: Colors.black,
+            // sets the active color of the `BottomNavigationBar` if `Brightness` is light
+            primaryColor: Colors.white,
+            textTheme: Theme
+                .of(context)
+                .textTheme
+                .copyWith(caption: new TextStyle(color: Colors.white))), // sets the inactive color of the `BottomNavigationBar`
+        child: new BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          currentIndex: 0,
+          items: [
+            new BottomNavigationBarItem(
+                icon: new Icon(Icons.home,size: 30.0,),
+                title: new Text("")
+            ),
+            new BottomNavigationBarItem(
+                icon: new Icon(Icons.card_giftcard,size: 30.0,),
+                title: new Text("")
+            ),
+            new BottomNavigationBarItem(
+                icon: new Icon(Icons.album,size: 30.0,),
+                title: new Text("")
+            ),
+            new BottomNavigationBarItem(
+                icon: new Icon(Icons.shopping_cart,size: 30.0,color: Colors.yellow,),
+                title: new Text("")
+            )
+          ],
+        ),
+      ),
+
+
+
+
+//      bottomNavigationBar: new BottomNavigationBar(
+//
+//          items: [
+//
+//        new BottomNavigationBarItem(icon: Icon(Icons.home,color: Colors.black,),title: Text("Home")),
+//        new BottomNavigationBarItem(icon: Icon(Icons.radio),title: Text("Product")),
+//        new BottomNavigationBarItem(icon: Icon(Icons.shopping_cart),title: Text("List")),
+//        new BottomNavigationBarItem(icon: Icon(Icons.all_out),title: Text("Profile")),
+//
+//      ]),
+      
     );
   }
   Widget allData(String image,String price,String des,String lstDes,String amount){
