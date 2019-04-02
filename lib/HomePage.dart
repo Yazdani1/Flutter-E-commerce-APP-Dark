@@ -33,7 +33,7 @@ class _HomeState extends State<Home> {
           ),//First container end
 
           //second container start
-          new SizedBox(height: 10.0,),
+          new SizedBox(height: 5.0,),
           new Container(
             margin: EdgeInsets.all(10.0),
             child: new Row(
@@ -85,7 +85,7 @@ class _HomeState extends State<Home> {
               ],
             ),
           ),//seond container end
-          new SizedBox(height: 20.0,),
+          new SizedBox(height: 1.0,),
           
           new Container(
             margin: EdgeInsets.all(15.0),
@@ -150,7 +150,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
-          ),//second container end
+          ),//third container end
 
           new SizedBox(height: 20.0,),
 
@@ -173,7 +173,37 @@ class _HomeState extends State<Home> {
 
               ],
             ),
-          )
+          ),
+          new SizedBox(height: 10.0,),
+          new Container(
+            margin: EdgeInsets.all(1.0),
+
+            decoration: new BoxDecoration(
+                color: Color(0xFF24272F),
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(20.0),
+                topRight: Radius.circular(20.0)
+              )
+            ),
+            child: new Column(
+              children: <Widget>[
+                allData("asset/cc.jpg", "66", "Jins Top", "Best Designer", "+25"),
+                new SizedBox(height: 10.0,),
+                allData("asset/dd.jpg", "86", "Girls Top", "Top Designer", "+85"),
+                new SizedBox(height: 10.0,),
+                allData("asset/ff.jpg", "36", "Ladies Dress", "Best Color", "+95"),
+                new SizedBox(height: 10.0,),
+                allData("asset/ee.jpg", "986", "T-Shirt", "Best Designer", "+35"),
+                new SizedBox(height: 10.0,),
+                allData("asset/b.jpg", "986", "T-Shirt", "Best Designer", "+35"),
+                new SizedBox(height: 10.0,),
+
+
+              ],
+            ),
+          ),//fourth container end..
+
+
 
 
 
@@ -183,5 +213,77 @@ class _HomeState extends State<Home> {
 
     );
   }
+  Widget allData(String image,String price,String des,String lstDes,String amount){
+    return Container(
+      margin: EdgeInsets.all(1.0),
+
+      child: new Card(
+        elevation: 10.0,
+        color: Color(0xFF24272F),
+        margin: EdgeInsets.all(10.0),
+        child: new Row(
+          children: <Widget>[
+
+            new Container(
+                margin: EdgeInsets.all(7.0),
+              child: new ClipRRect(
+                borderRadius: BorderRadius.circular(10.0),
+
+                  child: new Image(image: AssetImage(image),
+                    height: 80.0,
+                    width: 80.0,
+                    fit: BoxFit.cover,
+                  )
+
+
+              ),
+            ),
+
+            new SizedBox(width: 20.0,),
+
+            new Container(
+              child: new Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+
+                  new Text("\$"+price,
+                    style: TextStyle(fontSize: 22.0,color: Colors.white),
+                  ),
+                  new SizedBox(height: 7.0,),
+                  new Text(des,
+                    style: TextStyle(fontSize: 14.0,color: Colors.white),
+                  ),
+                  new Text(lstDes,
+                    style: TextStyle(fontSize: 14.0,color: Colors.white),
+                  ),
+
+                ],
+              ),
+            ),
+            new SizedBox(width: 90.0),
+            new SizedBox(height: 40.0,),
+            new Row(
+
+              children: <Widget>[
+                new Container(
+                  child: new Align(
+                    alignment: Alignment.topRight,
+                    child: new Text(amount,
+                    style: TextStyle(color: Colors.yellow,fontSize: 20.0),
+                    ),
+                  ),
+                )
+              ],
+            )
+
+          ],
+        ),
+
+      ),
+
+    );
+  }
+
+
 }
 
