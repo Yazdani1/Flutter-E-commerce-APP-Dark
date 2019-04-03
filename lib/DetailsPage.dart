@@ -14,12 +14,7 @@ class _DetailState extends State<Detail> {
         backgroundColor: Colors.green,
         actions: <Widget>[
 
-          new IconButton(
-              icon: new Icon(Icons.search,color: Colors.white,),
-              onPressed: ()=>debugPrint("Search..")
-          ),
-          
-
+        
         ],
       ),
     );
