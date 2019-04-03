@@ -12,10 +12,7 @@ class _DetailState extends State<Detail> {
       appBar: new AppBar(
         title: new Text("Shopping Details"),
         backgroundColor: Colors.green,
-        actions: <Widget>[
-
-        
-        ],
+      
       ),
     );
   }
