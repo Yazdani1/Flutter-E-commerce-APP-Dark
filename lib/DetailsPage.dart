@@ -18,11 +18,7 @@ class _DetailState extends State<Detail> {
               icon: new Icon(Icons.search,color: Colors.white,),
               onPressed: ()=>debugPrint("Search..")
           ),
-
-          new IconButton(
-              icon: new Icon(Icons.add),
-              onPressed: ()=>debugPrint("Add")
-          )
+          
 
         ],
       ),
