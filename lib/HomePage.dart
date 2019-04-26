@@ -247,7 +247,6 @@ class _HomeState extends State<Home> {
           ],
         ),
       ),
-
     );
   }
   Widget allData(String image,String price,String des,String lstDes,String amount){
